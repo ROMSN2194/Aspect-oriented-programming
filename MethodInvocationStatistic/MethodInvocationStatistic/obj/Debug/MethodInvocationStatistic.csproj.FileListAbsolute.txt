@@ -1,0 +1,9 @@
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\MethodInvocationStatistic.exe.config
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\NLog.config
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\MethodInvocationStatistic.exe
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\MethodInvocationStatistic.pdb
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\NLog.dll
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\NLog.xml
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.exe
+c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.pdb
