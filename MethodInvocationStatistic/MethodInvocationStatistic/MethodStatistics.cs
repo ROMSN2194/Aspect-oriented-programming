@@ -1,46 +1,36 @@
-﻿using AspectInjector.Broker;
-using NLog;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodInvocationStatistic
 {
-   internal class MethodStatistics
+    internal class StackTraceUtils
     {
-        private const int currentMethodIndex = 1;
-        private static readonly Logger log = LogManager.GetCurrentClassLogger();
-        private string methodName;
-        private Stopwatch timer;
-
-        [Advice(InjectionPoints.Before, InjectionTargets.Method)]
-        public void OnEntry()
+        
+        private StackTrace stackTrace;
+        private IList<StackFrame> callers;
+        internal StackTraceUtils(StackTrace stackTrace)
         {
-            StackTrace stack = new StackTrace();
-
-            StackTraceUtils stackUtils = new StackTraceUtils(stack);
-            
-            methodName = stackUtils.GetCurrentMethodName();
-            log.Trace("Method " + methodName);
-
-            string callers = stackUtils.GetStackTraceMethods();
-            timer = new Stopwatch();
-            timer.Start();
-             
-
-            log.Trace("Call stack: {0}", callers);
+            this.stackTrace = stackTrace;
+            callers = new List<StackFrame>(stackTrace.GetFrames().Reverse());
         }
 
-        [Advice(InjectionPoints.After, InjectionTargets.Method)]
-        public void OnExit()
+        internal string GetStackTraceMethods()
         {
-            timer.Stop();
-            log.Trace("Execution time: {0}" , timer.ElapsedMilliseconds);
+            string callStackString = "";
+          
+            // To ignore .NET standard invocated methods like Run(), ExecuteAssembly()
+            for (int i = 8; i < callers.Count - 1; i++)
+            {
+                callStackString += callers[i].GetMethod() + "=>";
+            }
+
+            return callStackString;
+        }
+
+        internal string GetCurrentMethodName()
+        {
+            return callers[callers.Count - 2].GetMethod().ToString();
         }
     }
 }
-    
-
