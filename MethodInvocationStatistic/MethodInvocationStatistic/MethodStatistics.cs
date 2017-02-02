@@ -6,26 +6,26 @@ using System.Runtime.CompilerServices;
 
 namespace MethodInvocationStatistic
 {
-   internal class MethodStatistics
+    internal class MethodStatistics
     {
         private static readonly Logger log = LogManager.GetCurrentClassLogger();
         private string methodName;
         private Stopwatch timer;
-        
+
         [Advice(InjectionPoints.Before, InjectionTargets.Method)]
         public void OnEntry()
         {
             StackTrace stack = new StackTrace();
-            
+
             StackTraceUtils stackUtils = new StackTraceUtils(stack);
-            
+
             methodName = stackUtils.GetCurrentMethodName();
             log.Info("Method " + methodName);
 
-            string callers =  stackUtils.GetStackTraceMethods();
+            string callers = stackUtils.GetStackTraceMethods();
             timer = new Stopwatch();
             timer.Start();
-            
+
             log.Info("Call stack: {0}", callers);
         }
 
@@ -33,7 +33,7 @@ namespace MethodInvocationStatistic
         public void OnExit()
         {
             timer.Stop();
-            log.Info("Execution time: {0} seconds" , timer.ElapsedMilliseconds/1000);
+            log.Info("Execution time: {0} seconds", timer.ElapsedMilliseconds / 1000);
         }
     }
 }

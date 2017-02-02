@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodInvocationStatistic
 {
     internal class StackTraceUtils
     {
-        
         private StackTrace stackTrace;
         private IList<StackFrame> callers;
+
         internal StackTraceUtils(StackTrace stackTrace)
         {
             this.stackTrace = stackTrace;
@@ -21,7 +18,7 @@ namespace MethodInvocationStatistic
         internal string GetStackTraceMethods()
         {
             string callStackString = "";
-          
+
             // To ignore .NET standard invocated methods like Run(), ExecuteAssembly()
             for (int i = 8; i < callers.Count - 1; i++)
             {

@@ -2,7 +2,6 @@
 using System;
 using System.Threading;
 
-
 namespace MethodInvocationStatistic
 {
     class TestClass

@@ -7,3 +7,6 @@ c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\Me
 c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.exe
 c:\users\user\documents\visual studio 2015\Projects\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.pdb
+C:\Users\rlebetc\Source\Repos\Aspect-oriented-programming\MethodInvocationStatistic\MethodInvocationStatistic\bin\Debug\MethodInvocationStatistic.exe.config
+C:\Users\rlebetc\Source\Repos\Aspect-oriented-programming\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.exe
+C:\Users\rlebetc\Source\Repos\Aspect-oriented-programming\MethodInvocationStatistic\MethodInvocationStatistic\obj\Debug\MethodInvocationStatistic.pdb
